@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>JQVMap - USA Map</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="../dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="../dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
+
+    <script>
+      var map;
+
+      jQuery(document).ready(function () {
+
+        // Store currentRegion
+        var currentRegion = 'ma';
+
+        // List of Regions we'll let clicks through for
+        var enabledRegions = ['tx', 'nj', 'nc','ca',
+                              'ct', 'wi', 'md', 'pa', 'il', 'ma'];
+
+        map = jQuery('#vmap').vectorMap({
+          map: 'usa_en',
+          enableZoom: true,
+          showTooltip: true,
+          selectedColor: '#333333',
+          selectedRegions: ['ma'],
+          hoverColor: null,
+          colors: {
+            
+            tx: '#C9DFAF',
+            nj: '#C9DFAF',
+            ny: '#C9DFAF',
+            nc: '#C9DFAF',
+            ca: '#C9DFAF',
+            wi: '#C9DFAF',
+            md: '#C9DFAF',
+            pa: '#C9DFAF',
+            il: '#C9DFAF',
+            ma: '#C9DFAF',
+
+          
+          },
+          onRegionClick: function(event, code, region){
+
+
+              if(code == 'tx') {
+             window.parent.location=('/web/tx.html');}
+             if(code == 'nj') {
+             window.parent.location=('/web/nm.html');}
+             if(code == 'ny') {
+             window.parent.location=('/web/ny.html');}
+             if(code == 'nc') {
+             window.parent.location=('/web/nc.html');}
+             if(code == 'ca') {
+             window.parent.location=('/web/ca.html');}
+             if(code == 'ct') {
+             window.parent.location=('/web/ct.html');}
+             if(code == 'wi') {
+             window.parent.location=('/web/wi.html');}
+             if(code == 'md') {
+             window.parent.location=('/web/md.html');}
+             if(code == 'pa') {
+             window.parent.location=('/web/pa.html');}
+             if(code == 'il') {
+             window.parent.location=('/web/il.html');}
+             if(code == 'ma') {
+             window.parent.location=('/web/ma.html');}
+
+
+
+
+            // Check if this is an Enabled Region, and not the current selected on
+            if(enabledRegions.indexOf(code) === -1 || currentRegion === code){
+              // Not an Enabled Region
+              event.preventDefault();
+            } else {
+              // Enabled Region. Update Newly Selected Region.
+              currentRegion = code;
+            }
+          },
+          onRegionSelect: function(event, code, region){
+            console.log(map.selectedRegions);
+          },
+          onLabelShow: function(event, label, code){
+            if(enabledRegions.indexOf(code) === -1){
+              event.preventDefault();
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="vmap" style="width: 600px; height: 400px;"></div>
+  </body>
+</html>
