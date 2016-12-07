@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>University world rank of USA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #A5BFDD;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #A5BFDD; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #ffffff; /* Dark Blue */
+      color: #555555;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      background-color: #e8ebef;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #A5BFDD !important;
+  }
+});
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- Navbar -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav ] class="navbar navbar-default navbar-fixed-top">
+    <div  class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">MAP</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#content">CONTENT</a></li>
+          <li><a href="#analyst">ANALYST</a></li>
+          <li><a href="#about">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- First Container -->
+<div id="content" class="container-fluid bg-1 text-center">
+  <h3 class="margin">University ranking in the world of USA.</h3>
+  <iframe src=jvec/examples/inactive_regions.html width=640 height=480 frameborder=0></iframe>
+  <h3>Texas</h3>
+</div>
+
+<!-- Second Container -->
+<div id="analyst" class="container-fluid bg-2 text-center">
+  <h3 class="margin">26: University of Texas at Austin</h3>
+  <iframe src=map/tx_us.html width=1080 height=480 frameborder=0></iframe>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+<!-- Third Container (Grid) -->
+<div id="about" class="container-fluid bg-3 text-center">    
+  <h3 class="margin">What i am?</h3><br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>สิ่งที่ช่วยสนับสนุน</p>
+  <p>jvascirpt python jqurey JQVMap</p> 
+</footer>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
