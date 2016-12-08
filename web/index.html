@@ -3,16 +3,12 @@
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>University world rank of USA</title>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="../dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="../dist/jquery.vmap.js"></script>
-  <script type="text/javascript" src="../dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -83,109 +79,27 @@
 <!-- First Container -->
 <div id="content" class="container-fluid bg-1 text-center">
   <h3 class="margin">University ranking in the world of USA.</h3>
-  <script>
-      var map;
-
-      jQuery(document).ready(function () {
-
-        // Store currentRegion
-        var currentRegion = 'ma';
-
-        // List of Regions we'll let clicks through for
-        var enabledRegions = ['mo', 'fl', 'or','sc', 'tx', 'mt', 'nv', 'az', 'oh', 'ms', 'nm', 'ny', 'nc', 'va', 'nh', 'ca',
-                              'ct', 'wi', 'ut', 'in', 'md', 'pa', 'il', 'ma', 'mi', 'mn', 'co', 'wa'];
-
-        map = jQuery('#vmap').vectorMap({
-          map: 'usa_en',
-          enableZoom: true,
-          showTooltip: true,
-          selectedColor: '#333333',
-          selectedRegions: ['ma'],
-          hoverColor: null,
-          colors: {
-            mo: '#C9DFAF',
-            fl: '#C9DFAF',
-            or: '#C9DFAF',
-            sc: '#C9DFAF',
-            tx: '#C9DFAF',
-            mt: '#C9DFAF',
-            nv: '#C9DFAF',
-            az: '#C9DFAF',
-            oh: '#C9DFAF',
-            ms: '#C9DFAF',
-            nm: '#C9DFAF',
-            ny: '#C9DFAF',
-            nc: '#C9DFAF',
-            va: '#C9DFAF',
-            nh: '#C9DFAF',
-            ca: '#C9DFAF',
-            ct: '#C9DFAF',
-            wi: '#C9DFAF',
-            ut: '#C9DFAF',
-            in: '#C9DFAF',
-            md: '#C9DFAF',
-            pa: '#C9DFAF',
-            il: '#C9DFAF',
-            ma: '#C9DFAF',
-            mi: '#C9DFAF',
-            mn: '#C9DFAF',
-            co: '#C9DFAF',
-            wa: '#C9DFAF',
-          },
-          onRegionClick: function(event, code, region){
-            // Check if this is an Enabled Region, and not the current selected on
-            if(enabledRegions.indexOf(code) === -1 || currentRegion === code){
-              // Not an Enabled Region
-              event.preventDefault();
-            } else {
-              // Enabled Region. Update Newly Selected Region.
-              currentRegion = code;
-            }
-          },
-          onRegionSelect: function(event, code, region){
-            console.log(map.selectedRegions);
-          },
-          onLabelShow: function(event, label, code){
-            if(enabledRegions.indexOf(code) === -1){
-              event.preventDefault();
-            }
-          }
-        });
-      });
-  </script>
-  <h3>Choose your city.</h3>
+  <iframe src=jvec/examples/inactive_regions.html width=640 height=480 frameborder=0></iframe>
+  <h3>Maryland</h3>
 </div>
 
 <!-- Second Container -->
 <div id="analyst" class="container-fluid bg-2 text-center">
-  <h3 class="margin">Harvard University</h3>
-  <iframe src=map/ma_hv.html width=1080 height=480 frameborder=0></iframe>
-  <h3 class="margin">Massachusetts Institute of Technology</h3>
-  <iframe src=map/ma_mi.html width=1080 height=480 frameborder=0></iframe>
+  <h3 class="margin">17: Johns Hopkins University</h3>
+  <iframe src=map/jh_us.html width=1080 height=480 frameborder=0></iframe>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
 <!-- Third Container (Grid) -->
 <div id="about" class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-  </div>
+  <h3 class="margin">What i am?</h3><br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com">www.w3schools.com</a></p> 
+  <p>สิ่งที่ช่วยสนับสนุน</p>
+  <p>jvascirpt python jqurey JQVMap</p> 
 </footer>
 <script>
 $(document).ready(function(){
